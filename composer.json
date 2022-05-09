@@ -1,9 +1,9 @@
 {
-    "name": "hcodebr/ecommerce",
+    "name": "brunocoutinhooliveira/ecommerce",
     "authors": [
         {
-            "name": "Hcode Treinamentos",
-            "email": "suporte@hcode.com.br"
+            "name": "Bruno Coutinho",
+            "email": "brunodba@gmail.com"
         }
     ],
     "require": {
