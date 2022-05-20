@@ -2,15 +2,21 @@
 session_start();
 require_once("vendor/autoload.php");
 
+use \Slim\Slim;
+use \Hcode\Page;
+use \Hcode\PageAdmin;
 use Hcode\Model\User;
 
-$app = new \Slim\Slim();
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function () {
-
-	$page = new Hcode\Page();
+	// $sql = new Hcode\DB\Sql();
+	// $results = $sql->select("SELECT * FROM tb_users");
+	// echo json_encode($results);
+	// echo "OK";
+	$page = new Page();
 
 	$page->setTpl("index");
 });
@@ -19,7 +25,7 @@ $app->get('/admin', function () {
 
 	User::verifyLogin();
 
-	$page = new Hcode\PageAdmin();
+	$page = new PageAdmin();
 
 	$page->setTpl("index");
 });
