@@ -7,6 +7,7 @@ use \Slim\Slim;
 $app = new Slim();
 
 $app->config('debug', true);
+require_once("functions.php");
 require_once("routes/admin-categories.php");
 require_once("routes/admin-forgotten.php");
 require_once("routes/admin-logins.php");
